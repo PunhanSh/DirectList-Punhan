@@ -25,21 +25,13 @@
                                 <h3>@Model.Blog.Name</h3>
                                 <ul class="post-meta">
                                     <li>@Model.Blog.CreatedDate.ToString("MMMM dd,yyyy")</li>
-                                    <li><a>5 Comments</a></li>
+                                    <li><a>@Model.Comments.Count Comments</a></li>
                                 </ul>
                                 @Model.Blog.Title
                             </div>
                         </div>
                         <!-- Blog Post / End -->
-                        <!-- Post Navigation -->
-                        <ul id="posts-nav" class="margin-top-0 margin-bottom-45">
-                            <li class="next-post">
-                                <button class="btn btn-1 btn-primary" type="button">Next</button>
-                            </li>
-                            <li class="prev-post">
-                                <button class="btn btn-1 btn-primary" type="button"> Previous</button>
-                            </li>
-                        </ul>
+                        
                         <!-- About Author -->
                         <div class="about-author">
                             <img src="~/Uploads/@Model.CustomUser.Image" alt="image" />
@@ -82,7 +74,6 @@
                                         <p>
                                             @item.Content
                                         </p>
-                                        <button class="btn btn-sm btn-primary" type="button">Reply</button>
                                     </div>
                                 </div>
                             }

@@ -12,8 +12,6 @@ namespace DirectListt.ViewModels
         public List<Blog> Blogs { get; set; }
         public Blog Blog { get; set; }
         public List<Comment> Comments { get; set; }
-        public List<Social> Socials { get; set; }
         public CustomUser CustomUser { get; set; }
-        public Banner Banner { get; set; }
     }
 }

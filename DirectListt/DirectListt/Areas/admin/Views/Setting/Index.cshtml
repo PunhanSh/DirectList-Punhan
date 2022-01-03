@@ -26,7 +26,7 @@
                         <th scope="col">Dream SubTitle</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody style="height: 107px; overflow: hidden; position: absolute;">
                     <tr>
                         <th scope="row"></th>
                         <td><img src="~/Uploads/@Model.Logo" style="width: 100px" alt="Alternate Text" /></td>
@@ -36,7 +36,7 @@
                         <td>@Model.Address</td>
                         <td>@Model.Email</td>
                         <td>@Model.Phone</td>
-                        <td>@Model.AboutUs</td>
+                        <td>@Html.Raw(Model.AboutUs)</td>
                         <td>@Model.DreamTitle</td>
                         <td>@Model.DreamSubTitle</td>
                         <td>

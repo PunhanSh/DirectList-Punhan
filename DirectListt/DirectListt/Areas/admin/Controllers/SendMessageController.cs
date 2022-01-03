@@ -60,7 +60,7 @@ namespace DirectListt.Areas.admin.Controllers
             foreach (var item in contacts)
             {
                 MailMessage message = new MailMessage();
-                message.From = new MailAddress("punhan.shahmurov.123456@gmail.com","Hello P222");
+                message.From = new MailAddress("codegroupsp@gmail.com","Salam P222");
                 message.To.Add(item.Email);
                 message.Body = MailText;
                 message.IsBodyHtml = true;
@@ -70,7 +70,7 @@ namespace DirectListt.Areas.admin.Controllers
                 smtpClient.Host = "smtp.gmail.com";
                 smtpClient.EnableSsl = true;
                 smtpClient.Port = 587;
-                smtpClient.Credentials = new NetworkCredential("punhan.shahmurov.123456@gmail.com", "Punhan123456");
+                smtpClient.Credentials = new NetworkCredential("codegroupsp@gmail.com", "codegroupsp2021");
                 smtpClient.Send(message);
             }
 

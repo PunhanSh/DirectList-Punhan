@@ -24,18 +24,18 @@ namespace DirectListt.Controllers
             model.CustomUser = _context.CustomUsers.FirstOrDefault();
             model.Setting = _context.Settings.FirstOrDefault();
             model.Socials = _context.Socials.ToList();
-            model.Banner = _context.Banners.FirstOrDefault(b => b.Page.ToLower() == "bloglist");
-            model.Blogs= _context.Blogs.Where(b=>(Searchdata != null ? b.Title.ToLower().Contains(Searchdata.ToLower()) : true)).ToList();
+            model.Banner = _context.Banners.FirstOrDefault(b => b.Page.ToLower() == "list of blogs");
+            model.Blogs= _context.Blogs.Where(b=>(Searchdata != null ? b.Name.ToLower().Contains(Searchdata.ToLower()) : true)).ToList();
             return View(model);
         }
-        public IActionResult Detail(int? id, string Searchdata)
+        public IActionResult Detail(int? id)
         {
             Blog blog = null;
             Setting setting = _context.Settings.FirstOrDefault();
             List<Social> socials = _context.Socials.ToList();
             List<Blog> blogs = _context.Blogs.ToList();
             CustomUser customUser = _context.CustomUsers.FirstOrDefault();
-            Banner banner = _context.Banners.FirstOrDefault(b => b.Page.ToLower() == "bloglist");
+            Banner banner = _context.Banners.FirstOrDefault(b => b.Page.ToLower() == "detail of blog");
             List<Comment> comments = _context.Comments.Where(i => i.BlogId == id).OrderByDescending(bc => bc.CreatedDate).ToList();
             if (id != null)
             {

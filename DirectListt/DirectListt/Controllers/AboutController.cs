@@ -18,11 +18,13 @@ namespace DirectListt.Controllers
         }
         public IActionResult Index()
         {
-            VmAbout model = new VmAbout();
-            model.Setting = _context.Settings.FirstOrDefault();
-            model.Socials = _context.Socials.ToList();
-            model.About = _context.Abouts.FirstOrDefault();
-            model.Banner = _context.Banners.FirstOrDefault(b => b.Page.ToLower() == "about");
+            VmAbout model = new VmAbout()
+            {
+                Setting = _context.Settings.FirstOrDefault(),
+                Socials = _context.Socials.ToList(),
+                About = _context.Abouts.FirstOrDefault(),
+                Banner = _context.Banners.FirstOrDefault(b => b.Page.ToLower() == "about")
+            };
             return View(model);
         }
     }

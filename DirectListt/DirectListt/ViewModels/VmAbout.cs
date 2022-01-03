@@ -9,8 +9,6 @@ namespace DirectListt.ViewModels
     public class VmAbout : VmLayout
     {
         public About About { get; set; }
-        public Setting Setting { get; set; }
-        public Banner Banner { get; set; }
 
     }
 }

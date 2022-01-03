@@ -15,7 +15,6 @@ namespace DirectListt.ViewModels
         public List<Restaurant> Restaurants { get; set; }
         public List<RestaurantReview> RestaurantReviews { get; set; }
         public List<Tag> Tags { get; set; }
-        public Banner Banner { get; set; }
 
 
     }
