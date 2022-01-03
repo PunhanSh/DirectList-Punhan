@@ -47,6 +47,7 @@ namespace DirectListt.Areas.admin.Controllers
                             model.ImageFile.CopyTo(stream);
                         }
                         model.Image = fileName;
+                        model.CreatedDate = DateTime.Now;
                         _context.Blogs.Add(model);
                         _context.SaveChanges();
                         return RedirectToAction("Index");

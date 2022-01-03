@@ -11,13 +11,13 @@ namespace DirectListt.Models
     {
         [Key]
         public int Id { get; set; }
-        [MaxLength(50)]
+        [MaxLength(50), Required]
         public string Name { get; set; }
-        [MaxLength(50)]
+        [MaxLength(50), Required]
         public string Email { get; set; }
-        [MaxLength(100)]
+        [MaxLength(100), Required]
         public string Subject { get; set; }
-        [MaxLength(200)]
+        [MaxLength(200), Required]
         public string Content { get; set; }
         public DateTime CreatedDate { get; set; }
         [ForeignKey("Blog")]

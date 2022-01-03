@@ -221,7 +221,6 @@ C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5
 C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\DirectListt.TagHelpers.output.cache
 C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\DirectListt.RazorCoreGenerate.cache
 C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Views\About\Index.cshtml.g.cs
-C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Views\BlogDetail\Index.cshtml.g.cs
 C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Views\BlogList\Index.cshtml.g.cs
 C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Views\Contact\Index.cshtml.g.cs
 C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
@@ -288,3 +287,17 @@ C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5
 C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Areas\admin\Views\Feature\Index.cshtml.g.cs
 C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Areas\admin\Views\Feature\Create.cshtml.g.cs
 C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Areas\admin\Views\Feature\Update.cshtml.g.cs
+C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Areas\admin\Views\Setting\Index.cshtml.g.cs
+C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Areas\admin\Views\Setting\Create.cshtml.g.cs
+C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Areas\admin\Views\Setting\Update.cshtml.g.cs
+C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Views\BlogList\Detail.cshtml.g.cs
+C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Areas\admin\Views\Social\Index.cshtml.g.cs
+C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Areas\admin\Views\Social\Create.cshtml.g.cs
+C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Areas\admin\Views\Social\Update.cshtml.g.cs
+C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Areas\admin\Views\Banner\Index.cshtml.g.cs
+C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Areas\admin\Views\Banner\Update.cshtml.g.cs
+C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Areas\admin\Views\Banner\Create.cshtml.g.cs
+C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Views\Shared\_BannerPartial.cshtml.g.cs
+C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Areas\admin\Views\SendMessage\Index.cshtml.g.cs
+C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Areas\admin\Views\SendMessage\Update.cshtml.g.cs
+C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Areas\admin\Views\SendMessage\SendMailAll.cshtml.g.cs

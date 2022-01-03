@@ -1,47 +1,29 @@
-﻿
+﻿@model VmAbout
 @{
     ViewData["Title"] = "Index";
 }
 
 
 <div class="main-wrapper">
-    <div id="titlebar" class="gradient">
-        <div class="title-bar-inner">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2>About Us</h2>
-                        <span>Explore your search places</span>
-                        <!-- Breadcrumbs -->
-                        <nav id="breadcrumbs">
-                            <ul>
-                                <li><a>Home</a></li>
-                                <li>About Us</li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="title-overlay"></div>
-    </div>
+    <partial name="_BannerPartial" model="Model.Banner" />
+
     <div class="content pt-0">
         <div class="about-wrapper">
-            
+
             <div class="block-space bg-secondary">
                 <div class="container">
                     <div class="row row-grid align-items-center">
                         <div class="col-md-6">
                             <div class="card bg-default shadow border-0">
-                                <img src="assets/images/about-image.jpg" class="card-img-top" alt="image">
+                                <img src="~/Uploads/@Model.About.Image" class="card-img-top" alt="image">
                                 <blockquote class="card-blockquote">
                                     <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95" class="svg-bg">
                                         <polygon points="0,52 583,95 0,95" class="fill-default"></polygon>
                                         <polygon points="0,42 583,95 683,0 0,95" opacity=".2" class="fill-default"></polygon>
                                     </svg>
-                                    <h4 class="display-3 font-weight-bold text-white">Our Goal</h4>
+                                    <h4 class="display-3 font-weight-bold text-white">@Model.About.Title</h4>
                                     <p class="lead text-italic text-white">
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel consectetur, ipsa autem vitae quos ea laborum expedita
+                                        @Model.About.SubTitle
                                     </p>
                                 </blockquote>
                             </div>
@@ -52,15 +34,7 @@
                                     <i class="fa fa-info"></i>
                                 </div>
                                 <h3>About Us</h3>
-                                <p class="lead">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem sapiente, fugiat commodi reprehenderit expedita nam nemo
-                                </p>
-                                <p>
-                                    Molestiae labore inventore dolor voluptatem iste voluptatum sed iusto, pariatur doloremque quo nesciunt sit!
-                                </p>
-                                <p>
-                                    Molestiae labore inventore dolor voluptatem iste voluptatum sed iusto, pariatur doloremque quo nesciunt sit!
-                                </p>
+                                <p class="lead">@Model.Setting.AboutUs</p>
                                 <a href="#" class="font-weight-bold text-warning mt-5">Explore Your Places</a>
                             </div>
                         </div>

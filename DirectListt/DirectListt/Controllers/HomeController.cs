@@ -1,4 +1,6 @@
-﻿using DirectListt.Models;
+﻿using DirectListt.Data;
+using DirectListt.Models;
+using DirectListt.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -11,9 +13,18 @@ namespace DirectListt.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly AppDbContext _context;
+
+        public HomeController(AppDbContext context)
+        {
+            _context = context;
+        }
         public IActionResult Index()
         {
-            return View();
+            VmAbout model = new VmAbout();
+            model.Setting = _context.Settings.FirstOrDefault();
+            model.Socials = _context.Socials.ToList();
+            return View(model);
         }
     }
 }
