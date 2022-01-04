@@ -8,21 +8,22 @@ using System.Threading.Tasks;
 
 namespace DirectListt.Models
 {
-    public class KeyPeople
+    public class Adminstrator
     {
         [Key]
         public int Id { get; set; }
         [MaxLength(250)]
-        public string Image { get; set; }
-        [NotMapped]
-        public IFormFile ImageFile { get; set; }
-        [MaxLength(50)]
         public string Name { get; set; }
         [MaxLength(50)]
         public string Phone { get; set; }
-        [MaxLength(100)]
-        public string Website { get; set; }
-        [MaxLength(50)]
+        [MaxLength(250)]
         public string Email { get; set; }
+        [MaxLength(40)]
+        public string Image { get; set; }
+        [NotMapped]
+        public IFormFile ImageFile { get; set; }
+        [ForeignKey("Restaurant")]
+        public int RestaurantId { get; set; }
+        public Restaurant Restaurant { get; set; }
     }
 }

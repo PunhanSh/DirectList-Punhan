@@ -301,3 +301,17 @@ C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5
 C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Areas\admin\Views\SendMessage\Index.cshtml.g.cs
 C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Areas\admin\Views\SendMessage\Update.cshtml.g.cs
 C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Areas\admin\Views\SendMessage\SendMailAll.cshtml.g.cs
+C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Areas\admin\Views\Account\Register.cshtml.g.cs
+C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Areas\admin\Views\Account\Login.cshtml.g.cs
+C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Views\Restaurant\Details.cshtml.g.cs
+C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Areas\admin\Views\Tag\Index.cshtml.g.cs
+C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Areas\admin\Views\Tag\Update.cshtml.g.cs
+C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Areas\admin\Views\Tag\Create.cshtml.g.cs
+C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Areas\admin\Views\Menu\Index.cshtml.g.cs
+C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Areas\admin\Views\Menu\Create.cshtml.g.cs
+C:\Users\TUF DASH\Desktop\Backend-Project\DirectListt\DirectListt\obj\Debug\net5.0\Razor\Areas\admin\Views\Menu\Update.cshtml.g.cs

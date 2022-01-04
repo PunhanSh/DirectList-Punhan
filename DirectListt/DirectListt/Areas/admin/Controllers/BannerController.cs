@@ -24,7 +24,7 @@ namespace DirectListt.Areas.admin.Controllers
         }
         public IActionResult Index()
         {
-            Banner model = _context.Banners.FirstOrDefault();
+            List<Banner> model = _context.Banners.ToList();
             return View(model);
         }
         public IActionResult Create()

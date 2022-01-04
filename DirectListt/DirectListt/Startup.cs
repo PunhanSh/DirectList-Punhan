@@ -2,6 +2,7 @@ using DirectListt.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -27,6 +28,8 @@ namespace DirectListt
         {
             services.AddControllersWithViews();
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DirectList")));
+            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,15 +50,15 @@ namespace DirectListt
 
             app.UseRouting();
 
-            app.UseAuthentication();
             app.UseAuthorization();
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapAreaControllerRoute(
                    name: "Area",
                    areaName: "admin",
-                   pattern: "admin/{controller=Home}/{action=Index}/{id?}"
+                   pattern: "admin/{controller=Account}/{action=Login}/{id?}"
                    );
                 endpoints.MapControllerRoute(
                     name: "default",

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -8,10 +9,8 @@ using System.Threading.Tasks;
 
 namespace DirectListt.Models
 {
-    public class CustomUser
+    public class CustomUser : IdentityUser
     {
-        [Key]
-        public int Id { get; set; }
         [MaxLength(100)]
         public string Name { get; set; }
         [MaxLength(300)]

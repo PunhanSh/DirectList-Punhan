@@ -1,4 +1,5 @@
 ﻿using DirectListt.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DirectListt.Data
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : IdentityDbContext
     {
         public AppDbContext(DbContextOptions options) : base(options)
         {
@@ -21,7 +22,6 @@ namespace DirectListt.Data
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<CustomUser> CustomUsers { get; set; }
         public DbSet<Feature> Features { get; set; }
-        public DbSet<KeyPeople> KeyPeoples { get; set; }
         public DbSet<Menu> Menus { get; set; }
         public DbSet<Restaurant> Restaurants { get; set; }
         public DbSet<RestaurantImage> RestaurantImages { get; set; }

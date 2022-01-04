@@ -34,7 +34,7 @@
                         
                         <!-- About Author -->
                         <div class="about-author">
-                            <img src="~/Uploads/@Model.CustomUser.Image" alt="image" />
+                            <img src="~/assets/images/blank-profile-picture-973460_960_720.png" alt="image" />
                             <div class="about-description">
                                 <h4>@Model.CustomUser.Name</h4>
                                 <p>@Model.CustomUser.Title</p>
@@ -47,26 +47,26 @@
                             @foreach (var item in Model.Comments)
                             {
                                 <div class="row py-4 list-img-wrap">
-                                    <div class="col-md-2 list-img"><img class="img-fluid rounded-circle shadow-lg" src="~/Uploads/@Model.CustomUser.Image" alt="image"></div>
+                                    <div class="col-md-2 list-img"><img class="img-fluid rounded-circle shadow-lg" src="~/assets/images/blank-profile-picture-973460_960_720.png" alt="image"></div>
                                     <div class="col-md-10">
                                         <h5 class="text-primary"> @item.Name </h5>
                                         <p>
                                             @if (((DateTime.Now - item.CreatedDate).TotalSeconds / 60 / 60 / 24) >= 1)                                            
-                                                {@((((DateTime.Now - item.CreatedDate).TotalSeconds / 60 / 60 / 24).ToString("##") + " days ago").ToString());
+                                                {@((((DateTime.Now - item.CreatedDate).TotalSeconds / 60 / 60 / 24).ToString("##") + " day(s) ago").ToString());
                                             }
                                             else
                                                 {
                                                 if (((DateTime.Now - item.CreatedDate).TotalSeconds / 60 / 60) >= 1)
 
-                                                    { @((((DateTime.Now - item.CreatedDate).TotalSeconds / 60 / 60).ToString("##") + " hours ago").ToString());
+                                                    { @((((DateTime.Now - item.CreatedDate).TotalSeconds / 60 / 60).ToString("##") + " hour(s) ago").ToString());
                                                 }
                                                 else
                                                 {
                                                     @if (((DateTime.Now - item.CreatedDate).TotalSeconds / 60) >= 1)
-                                                        {@((((DateTime.Now - item.CreatedDate).TotalSeconds / 60).ToString("##") + " minutes ago").ToString());
+                                                        {@((((DateTime.Now - item.CreatedDate).TotalSeconds / 60).ToString("##") + " minute(s) ago").ToString());
                                                      }
                                                     else
-                                                        { @((((DateTime.Now - item.CreatedDate).TotalSeconds).ToString("##") + " seconds ago").ToString());
+                                                        { @((((DateTime.Now - item.CreatedDate).TotalSeconds).ToString("##") + " second(s) ago").ToString());
                                                     }
                                                 }
                                             }
