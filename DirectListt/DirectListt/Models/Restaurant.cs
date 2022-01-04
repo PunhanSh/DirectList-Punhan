@@ -34,7 +34,6 @@ namespace DirectListt.Models
         public string LocationNote { get; set; }
         public List<RestaurantReview> RestaurantReviews { get; set; }
         public List<RestaurantImage> RestaurantImages { get; set; }
-        //public List<> RestaurantComments { get; set; }
         public List<RestaurantToTag> RestaurantToTags { get; set; }
         public List<RestaurantToFeature> RestaurantToFeatures { get; set; }
         public List<RestaurantToMenu> RestaurantToMenus { get; set; }

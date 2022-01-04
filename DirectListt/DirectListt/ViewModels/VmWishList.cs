@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace DirectListt.ViewModels
 {
-    public class VmBooking : VmLayout
+    public class VmWishList
     {
-        public Restaurant Restaurant { get; set; }
         public List<Restaurant> Restaurants { get; set; }
-        public RestaurantReview RestaurantReview { get; set; }
-        public Booking Booking { get; set; }
+        public Setting Setting { get; set; }
+        public List<Social> Socials { get; set; }
     }
 }

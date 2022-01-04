@@ -12,8 +12,7 @@ namespace DirectListt.ViewModels
         public List<Feature> Features { get; set; }
         public List<Menu> Menus { get; set; }
         public List<Restaurant> Restaurants { get; set; }
-        public string SearchData { get; set; }
-
+        public List<string> AddWishlist { get; set; }
         public Restaurant Restaurant { get; set; }
         public List<RestaurantReview> RestaurantReviews { get; set; }
         public List<Tag> Tags { get; set; }

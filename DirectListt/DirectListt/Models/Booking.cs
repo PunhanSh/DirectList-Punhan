@@ -14,6 +14,7 @@ namespace DirectListt.Models
         [MaxLength(50)]
         public string ReserveName { get; set; }
         public DateTime ReserveDate { get; set; }
+        public DateTime CreatedDate { get; set; }
         public byte PersonCount { get; set; }
         [ForeignKey("Restaurant")]
         public int RestaurantId { get; set; }

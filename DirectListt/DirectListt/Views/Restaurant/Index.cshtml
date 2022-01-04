@@ -17,7 +17,7 @@
                         <form asp-controller="Restaurant" asp-action="Index" method="get" style="display: flex; ">
                             <div class="col-lg-8 col-sm-6">
                                 <div class="form-group">
-                                    <input asp-for="@Model.SearchData" type="text" placeholder="Enter Name of Restaurant" class="form-control" style="color:black;">
+                                    <input name="Searchdata" type="text" placeholder="Enter Name of Restaurant" class="form-control" style="color:black;">
                                 </div>
                             </div>
                             <div class="col-lg-4 col-sm-6 text-right">
@@ -31,45 +31,46 @@
                     <!-- Sorting - Filtering Section / End -->
                     <div class="row">
                         <!-- Listing Item -->
-                        @foreach (var restaurant in Model.Restaurants)
+                        @foreach (var item in Model.Restaurants)
                         {
-                    <div class="col-lg-12 col-md-12 mb-5">
-                        <div class="listing-item-container list-layout">
-                            <div class="listing-item">
-                                <!-- Image -->
-                                <div class="listing-item-image">
-                                    <a asp-controller="Restaurant" asp-action="Details" asp-route-id="@restaurant.Id"><img src="~/assets/images/@restaurant.RestaurantImages.FirstOrDefault().Name" alt=""></a>
-                                </div>
-                                <!-- Content -->
-                                <div class="listing-item-content">
-                                    <span text-uppercase">
-                                        @if ((restaurant.StartTime.Hour < DateTime.Now.Hour && restaurant.StartTime.Minute <= DateTime.Now.Minute) && (restaurant.EndTime.Hour > DateTime.Now.Hour && restaurant.EndTime.Minute <= DateTime.Now.Minute))
-                                        {
-                                            <span class="badge badge-pill list-banner badge-success" style="font-size: 20px">Open</span> 
-                                        }
-                                        else
-                                        {
-                                            <span class="badge badge-pill list-banner badge-danger" style="font-size: 20px">Closed</span>}
-                                    </span>
-                                    <div class="listing-item-inner">
-                                        <!-- <DirectlistRating [rate]="list.rating"></DirectlistRating> -->
-                                        <a asp-controller="Restaurant" asp-action="Details" asp-route-id="@restaurant.Id">
-                                            <h3>@restaurant.Name</h3>
-                                        </a>
-                                    <div class="address-bar"><small>@restaurant.Address</small> </div>
+                            <div class="col-lg-12 col-md-12 mb-5">
+                                <div class="listing-item-container list-layout">
+                                    <div class="listing-item">
+                                        <!-- Image -->
+                                        <div class="listing-item-image">
+                                            <a asp-controller="Restaurant" asp-action="Detail" asp-route-id="@item.Id"><img src="~/assets/images/@*@item.RestaurantImages.FirstOrDefault().Name*@" alt=""></a>
+                                        </div>
+                                        <!-- Content -->
+                                        <div class="listing-item-content">
+                                            <span text-uppercase">
+                                                @if ((item.StartTime.Hour < DateTime.Now.Hour && item.StartTime.Minute <= DateTime.Now.Minute) && (item.EndTime.Hour > DateTime.Now.Hour && item.EndTime.Minute <= DateTime.Now.Minute))
+                                                {
+                                                    <span class="badge badge-pill list-banner badge-success" style="font-size: 20px">Open</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="badge badge-pill list-banner badge-danger" style="font-size: 20px">Closed</span>}
+                                            </span>
+                                            <div class="listing-item-inner">
+                                                <a asp-controller="Restaurant" asp-action="Detail" asp-route-id="@item.Id">
+                                                    <h3>@item.Name</h3>
+                                                </a>
+                                                <div class="address-bar"><small>@item.Address</small> </div>
 
-                                    @foreach (var tag in restaurant.RestaurantToTags)
-                                    {
-                                        <div class="mt-3"><span class="badge badge-pill badge-primary text-uppercase badge-cat">@tag.Tag.Name</span></div>}
+                                                @foreach (var tag in item.RestaurantToTags)
+                                                 {
+                                                    <div class="mt-3"><span class="badge badge-pill badge-primary text-uppercase badge-cat">@tag.Tag.Name</span></div>
+                                                 }
+                                                
+                                            </div>
+                                            <a asp-controller="Restaurant" asp-action="AddWishlist" asp-route-id="@item.Id">
+                                                <span class="round-pill like-banner d-block bg-primary @(Model.AddWishlist!=null?Model.AddWishlist.Any(a => a==item.Id.ToString())==true?"bg-danger":"":"") "><i class="fa fa-heart-o"></i></span>
+                                            </a>
+                                        </div>
                                     </div>
-                                        @*<a asp-controller="Restaurant" asp-action="AddToCart" asp-route-id="@restaurant.Id">
-                                            <span class="round-pill like-banner d-block bg-primary @(Model.AddToCart!=null?Model.AddToCart.Any(a => a==restaurant.Id.ToString())==true?"myadded":"":"") "><i class="fa fa-heart-o"></i></span>
-                                        </a>*@
                                 </div>
                             </div>
-                        </div>
-                    </div>}
-                        <!-- Listing Item / End -->
+                        }
                     </div>
                 </div>
             </div>
