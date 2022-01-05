@@ -38,7 +38,7 @@
                                     <div class="listing-item">
                                         <!-- Image -->
                                         <div class="listing-item-image">
-                                            <a asp-controller="Restaurant" asp-action="Detail" asp-route-id="@item.Id"><img src="~/assets/images/@*@item.RestaurantImages.FirstOrDefault().Name*@" alt=""></a>
+                                            <a asp-controller="Restaurant" asp-action="Detail" asp-route-id="@item.Id"><img src="~/assets/images/@item.Image" alt=""></a>
                                         </div>
                                         <!-- Content -->
                                         <div class="listing-item-content">
@@ -58,13 +58,13 @@
                                                 <div class="address-bar"><small>@item.Address</small> </div>
 
                                                 @foreach (var tag in item.RestaurantToTags)
-                                                 {
-                                                    <div class="mt-3"><span class="badge badge-pill badge-primary text-uppercase badge-cat">@tag.Tag.Name</span></div>
-                                                 }
-                                                
+                                                {
+                                                    <div class="mt-3"><span class="badge badge-p badge-primary text-uppercase badge-cat">@tag.Tag.Name</span></div>
+                                                }
+
                                             </div>
                                             <a asp-controller="Restaurant" asp-action="AddWishlist" asp-route-id="@item.Id">
-                                                <span class="round-pill like-banner d-block bg-primary @(Model.AddWishlist!=null?Model.AddWishlist.Any(a => a==item.Id.ToString())==true?"bg-danger":"":"") "><i class="fa fa-heart-o"></i></span>
+                                                <span class="round-pill like-banner d-block bg-primary"><i class="@(Model.AddWishlist!=null?Model.AddWishlist.Any(c=>c==item.Id.ToString()) ? "fas fa-heart":"fa fa-heart-o":"")"></i></span>
                                             </a>
                                         </div>
                                     </div>
@@ -76,4 +76,4 @@
             </div>
         </div>
     </div>
-</div>
+</div>ill

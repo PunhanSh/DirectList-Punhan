@@ -25,7 +25,7 @@ namespace DirectListt.Areas.admin.Controllers
             _userManager = userManager;
             _signInManager = signInManager;
         }
-        [Authorize]
+        //[Authorize]
         public IActionResult Register()
         {
             return View();

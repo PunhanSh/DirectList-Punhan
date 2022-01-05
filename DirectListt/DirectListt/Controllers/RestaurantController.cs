@@ -21,12 +21,11 @@ namespace DirectListt.Controllers
         }
         public IActionResult Index(string SearchData)
         {
-            List<Restaurant> restaurants = _context.Restaurants.Include(ri => ri.RestaurantImages)
-                                                               .Include(rt => rt.RestaurantToTags).ThenInclude(t => t.Tag)
+            List<Restaurant> restaurants = _context.Restaurants.Include(rt => rt.RestaurantToTags).ThenInclude(t => t.Tag)
                                                                .Include(rf => rf.RestaurantToFeatures).ThenInclude(f => f.Feature)
                                                                .Include(rm => rm.RestaurantToMenus).ThenInclude(m => m.Menu)
                                                                .ToList();
-            string oldData = Request.Cookies["cart"];
+            string oldData = Request.Cookies["wishlist"];
 
             List<string> cartList = null;
 
@@ -52,12 +51,14 @@ namespace DirectListt.Controllers
 
 
             VmRestaurant model = new VmRestaurant();
-            model.Restaurants = _context.Restaurants.ToList();
+            //model.Restaurants = _context.Restaurants.ToList();
             model.Setting = _context.Settings.FirstOrDefault();
             model.Socials = _context.Socials.ToList();
             model.Banner = _context.Banners.FirstOrDefault(b => b.Page.ToLower() == "restaurant");
             model.Restaurants = _context.Restaurants.Where(b => (SearchData != null ? b.Name.Contains(SearchData) : true)).ToList();
             model.Restaurants = restaurants;
+            model.AddWishlist = oldData.Split("-").ToList();
+            //model.Image = restaurants.FirstOrDefault().RestaurantImages.FirstOrDefault().Name;
 
             return View(model);
         }
@@ -73,7 +74,6 @@ namespace DirectListt.Controllers
             Setting setting = _context.Settings.FirstOrDefault();
             List<Social> socials = _context.Socials.ToList();
             Restaurant restaurant = _context.Restaurants
-                                                            .Include(ri => ri.RestaurantImages)
                                                             .Include(rt => rt.RestaurantToTags).ThenInclude(t => t.Tag)
                                                             .Include(rf => rf.RestaurantToFeatures).ThenInclude(f => f.Feature)
                                                             .Include(rm => rm.RestaurantToMenus).ThenInclude(m => m.Menu)
@@ -99,14 +99,6 @@ namespace DirectListt.Controllers
             List<Social> socials = _context.Socials.ToList();
             List<Restaurant> restaurants = _context.Restaurants.ToList();
 
-            if (ModelState.IsValid)
-            {
-                vmBookings.RestaurantReview.CreatedDate = DateTime.Now;
-                _context.RestaurantReviews.Add(vmBookings.RestaurantReview);
-                _context.SaveChanges();
-                return RedirectToAction("Index");
-            }
-
             VmBooking vmBooking = new VmBooking()
             {
                 Socials = socials,
@@ -116,9 +108,18 @@ namespace DirectListt.Controllers
                 Restaurants = restaurants
             };
 
+            if (ModelState.IsValid)
+            {
+                vmBookings.RestaurantReview.CreatedDate = DateTime.Now;
+                _context.RestaurantReviews.Add(vmBookings.RestaurantReview);
+                _context.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View("Index", vmBooking);
+            }
 
-
-            return View("Index", vmBooking);
         }
         public IActionResult AddWishlist(int? id)
         {

@@ -24,7 +24,6 @@ namespace DirectListt.Data
         public DbSet<Feature> Features { get; set; }
         public DbSet<Menu> Menus { get; set; }
         public DbSet<Restaurant> Restaurants { get; set; }
-        public DbSet<RestaurantImage> RestaurantImages { get; set; }
         public DbSet<RestaurantReview> RestaurantReviews { get; set; }
         public DbSet<RestaurantToFeature> RestaurantToFeatures { get; set; }
         public DbSet<RestaurantToMenu> RestaurantToMenus { get; set; }

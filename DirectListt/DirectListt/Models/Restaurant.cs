@@ -24,6 +24,8 @@ namespace DirectListt.Models
         [MaxLength(30)]
         public string Phone3 { get; set; }
         [MaxLength(250)]
+        public string Image { get; set; }
+        [MaxLength(250)]
         public string Website { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
@@ -33,7 +35,6 @@ namespace DirectListt.Models
         [MaxLength(2000)]
         public string LocationNote { get; set; }
         public List<RestaurantReview> RestaurantReviews { get; set; }
-        public List<RestaurantImage> RestaurantImages { get; set; }
         public List<RestaurantToTag> RestaurantToTags { get; set; }
         public List<RestaurantToFeature> RestaurantToFeatures { get; set; }
         public List<RestaurantToMenu> RestaurantToMenus { get; set; }

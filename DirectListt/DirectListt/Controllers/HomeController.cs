@@ -27,7 +27,7 @@ namespace DirectListt.Controllers
             model.Setting = _context.Settings.FirstOrDefault();
             model.Socials = _context.Socials.ToList();
             model.Blogs = _context.Blogs.OrderByDescending(bc => bc.CreatedDate).Take(3).ToList();
-            model.Restaurants = _context.Restaurants.Include(ri => ri.RestaurantImages)
+            model.Restaurants = _context.Restaurants
                                                     .Include(rt => rt.RestaurantToTags).ThenInclude(t => t.Tag).ToList();
             return View(model);
         }
